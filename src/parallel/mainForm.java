@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import jdk.nashorn.internal.scripts.JO;
 
 /**
  *
@@ -264,9 +265,15 @@ public class mainForm extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+
         arraylength = Integer.parseInt(qty.getText());
         minBuscar = Integer.parseInt(vmBuscar.getText());
         maxBuscar = Integer.parseInt(vtBuscar.getText());
+        
+        if(arraylength <=1 ){
+            JOptionPane.showMessageDialog(this, "La longitud del arreglo debe ser mayor a 1", "ALERTA", JOptionPane.INFORMATION_MESSAGE);
+        }
         
         if(minBuscar >= maxBuscar){
             JOptionPane.showMessageDialog(this, "El valor minimo no debe ser mayor o igual al máximo","Alerta", JOptionPane.INFORMATION_MESSAGE);
