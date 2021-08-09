@@ -55,6 +55,8 @@ public class mainForm extends javax.swing.JFrame {
         vtBuscar = new javax.swing.JFormattedTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jtValorBuscar = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,6 +135,11 @@ public class mainForm extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel12.setText("Saury Polanco 2-16-2014");
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel13.setText("Valor a Buscar");
+
+        jtValorBuscar.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#####"))));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -152,25 +159,30 @@ public class mainForm extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel10))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel10))
+                                .addGap(118, 118, 118)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(vmBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(vtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel1))
+                                .addGap(73, 73, 73)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtValorBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGap(18, 246, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(vmBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(vtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel12))
-                                .addGap(101, 101, 101))))
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12))
+                        .addGap(101, 101, 101))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(127, 127, 127)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -180,7 +192,7 @@ public class mainForm extends javax.swing.JFrame {
                             .addComponent(rSecuencial, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(rbinaria, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addContainerGap())))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -191,7 +203,11 @@ public class mainForm extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(qty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(jtValorBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(vmBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -199,7 +215,7 @@ public class mainForm extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
                             .addComponent(vtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(16, 16, 16)
+                        .addGap(2, 2, 2)
                         .addComponent(jButton1)
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -270,10 +286,13 @@ public class mainForm extends javax.swing.JFrame {
         arraylength = Integer.parseInt(qty.getText());
         minBuscar = Integer.parseInt(vmBuscar.getText());
         maxBuscar = Integer.parseInt(vtBuscar.getText());
+        valorBuscar = Integer.parseInt(jtValorBuscar.getText());
         
         if(arraylength <=1 ){
             JOptionPane.showMessageDialog(this, "La longitud del arreglo debe ser mayor a 1", "ALERTA", JOptionPane.INFORMATION_MESSAGE);
+            return;
         }
+      
         
         if(minBuscar >= maxBuscar){
             JOptionPane.showMessageDialog(this, "El valor minimo no debe ser mayor o igual al máximo","Alerta", JOptionPane.INFORMATION_MESSAGE);
@@ -291,11 +310,11 @@ public class mainForm extends javax.swing.JFrame {
         int[] array = new int[arraylength];
         array = llenarArreglo(array);
 
-        functionsClass fc1 = new functionsClass(1, array, 120, minBuscar, maxBuscar, rSecuencial);
-        functionsClass fc2 = new functionsClass(2, array, 120, minBuscar, maxBuscar, rbinaria);
-        functionsClass fc3 = new functionsClass(3, array, 120, minBuscar, maxBuscar, rBurbuja);
-        functionsClass fc4 = new functionsClass(4, array, 120, minBuscar, maxBuscar, rQuickSort);
-        functionsClass fc5 = new functionsClass(5, array, 120, minBuscar, maxBuscar, rInsercion);
+        functionsClass fc1 = new functionsClass(1, array, valorBuscar, minBuscar, maxBuscar, rSecuencial);
+        functionsClass fc2 = new functionsClass(2, array, valorBuscar, minBuscar, maxBuscar, rbinaria);
+        functionsClass fc3 = new functionsClass(3, array, valorBuscar, minBuscar, maxBuscar, rBurbuja);
+        functionsClass fc4 = new functionsClass(4, array, valorBuscar, minBuscar, maxBuscar, rQuickSort);
+        functionsClass fc5 = new functionsClass(5, array, valorBuscar, minBuscar, maxBuscar, rInsercion);
 
         fc1.start();
         fc2.start();
@@ -310,6 +329,7 @@ public class mainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public String resultados = "";
+    public static int valorBuscar;
     public static int minBuscar;
     public static int maxBuscar = 0;
     public static int arraylength = 11000;
@@ -345,6 +365,7 @@ public class mainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -353,6 +374,7 @@ public class mainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JFormattedTextField jtValorBuscar;
     private javax.swing.JFormattedTextField qty;
     private javax.swing.JTextField rBurbuja;
     private javax.swing.JTextField rInsercion;
